@@ -59,11 +59,27 @@ class PlistConverter {
             throw IventoryError.invalidResource
         }
         
+        //casting as? giving any object to our dict
         guard let dictionary = NSDictionary(contentsOfFile: path) as? [String: AnyObject] else {
             throw IventoryError.conversionFailure
         }
         
         return dictionary
+    }
+}
+
+//create an iventory
+class IventoryUnarchiver {
+    static func vendingIventory(fromDictionary dictionary: [String: AnyObject]) -> [VendingSelection: VendingItem] {
+        var inventory: [VendingSelection: VendingItem] = [:]
+        
+        for (key, value) in dictionary {
+            if let itemDictionary = value as? [String: Any], let price = itemDictionary["price"] as? Double, let quantity = itemDictionary["quantity"] as? Int {
+                
+                let item = Item(price: price, quantity: quantity)
+            }
+        }
+        return inventory
     }
 }
 
