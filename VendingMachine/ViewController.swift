@@ -18,11 +18,27 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    let vendingMachine: VendingMachine
+    
+    required init?(coder aDecoder: NSCoder) {
+        do {
+            let dictionary = try PlistConverter.Dictionary(FromFile: "VendingInventory", ofType: "plist")
+            let inventory = try IventoryUnarchiver.vendingIventory(fromDictionary: dictionary)
+            self.vendingMachine = FoodVendingMachine(inventory: inventory)
+            
+        }catch let error {
+            fatalError("\(error)")
+        }
+        //complete the initializer
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCollectionViewCells()
+        print(vendingMachine.inventory)
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,7 +10,7 @@ import Foundation
 
 //Model
 //enum to hold items
-enum VendingSelection {
+enum VendingSelection: String {
     case soda
     case dietSoda
     case chips
@@ -50,6 +50,7 @@ struct Item: VendingItem {
 enum IventoryError: Error {
     case invalidResource
     case conversionFailure
+    case invalidSelection
 }
 
 //Data Property list from the local file
@@ -70,16 +71,21 @@ class PlistConverter {
 
 //create an iventory
 class IventoryUnarchiver {
-    static func vendingIventory(fromDictionary dictionary: [String: AnyObject]) -> [VendingSelection: VendingItem] {
-        var inventory: [VendingSelection: VendingItem] = [:]
+    static func vendingIventory(fromDictionary dictionary: [String: AnyObject]) throws -> [VendingSelection: VendingItem] {
+        var iventory: [VendingSelection: VendingItem] = [:]
         
         for (key, value) in dictionary {
             if let itemDictionary = value as? [String: Any], let price = itemDictionary["price"] as? Double, let quantity = itemDictionary["quantity"] as? Int {
                 
                 let item = Item(price: price, quantity: quantity)
+                
+                guard let selection = VendingSelection(rawValue: key) else {
+                    throw IventoryError.invalidSelection
+                }
+                iventory.updateValue(item, forKey: selection)
             }
         }
-        return inventory
+        return iventory
     }
 }
 
