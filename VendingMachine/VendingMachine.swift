@@ -8,6 +8,7 @@
 
 import Foundation
 
+//enum to hold items
 enum VendingSelection {
     case soda
     case dietSoda
@@ -38,3 +39,41 @@ protocol VendingMachine {
     func deposit(_ amount: Double)
     
 }
+
+struct Item: VendingItem {
+    let price: Double
+    var quantity: Int
+}
+
+class FoodVendingMachine: VendingMachine {
+    let selection: [VendingSelection] = [.soda, .dietSoda, .chips, .cookie, .fruitJuice, .gum, .popTart, .sandwich, .candyBar, .sportsDrink, .water, .wrap]
+    
+    var inventory: [VendingSelection : VendingItem]
+    var amountDeposited: Double = 10.0
+    
+    required init(inventory: [VendingSelection : VendingItem]) {
+        self.inventory = inventory
+    }
+    
+    func vend(_ quantity: Int, _ selection: VendingSelection) throws {
+        <#code#>
+    }
+    
+    func deposit(_ amount: Double) {
+        <#code#>
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
