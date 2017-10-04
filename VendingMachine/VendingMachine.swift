@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model
 //enum to hold items
 enum VendingSelection {
     case soda
@@ -45,6 +46,15 @@ struct Item: VendingItem {
     var quantity: Int
 }
 
+//Data Property list from the local file
+class PlistConverter {
+    static func Dictionary(FromFile name: String, ofType type: String) throws -> [String: AnyObject]{
+        guard let path = Bundle.main.path(forResource: name, ofType: type) else {
+            
+        }
+    }
+}
+
 class FoodVendingMachine: VendingMachine {
     let selection: [VendingSelection] = [.soda, .dietSoda, .chips, .cookie, .fruitJuice, .gum, .popTart, .sandwich, .candyBar, .sportsDrink, .water, .wrap]
     
@@ -56,11 +66,11 @@ class FoodVendingMachine: VendingMachine {
     }
     
     func vend(_ quantity: Int, _ selection: VendingSelection) throws {
-        <#code#>
+        
     }
     
     func deposit(_ amount: Double) {
-        <#code#>
+        
     }
 }
 
