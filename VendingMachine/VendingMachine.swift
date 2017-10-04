@@ -46,11 +46,21 @@ struct Item: VendingItem {
     var quantity: Int
 }
 
+//Error type to model any errorcould arise
+enum IventoryError: Error {
+    case invalidResource
+    case conversionFailure
+}
+
 //Data Property list from the local file
 class PlistConverter {
     static func Dictionary(FromFile name: String, ofType type: String) throws -> [String: AnyObject]{
         guard let path = Bundle.main.path(forResource: name, ofType: type) else {
-            
+            throw IventoryError.invalidResource
+        }
+        
+        guard let dictionary = NSDictionary(contentsOfFile: path)else {
+            throw IventoryError.conversionFailure
         }
     }
 }
