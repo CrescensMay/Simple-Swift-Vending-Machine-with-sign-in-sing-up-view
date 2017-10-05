@@ -75,10 +75,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             do {
                 try vendingMachine.vend(selection: currentSelection, quantity: Int(quantityStepper.value))
                 updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0.0, itemPrice: 0, itemQuatity: 1)
-            } catch VendingMachineError.outOfStock {
-               showAlert()
-            } catch {
                 
+            } catch VendingMachineError.outOfStock {
+               showAlertWith(title: "Out Of Stock", message: "This item is unavailable, please make another selection")
+            } catch VendingMachineError.invalidSelection {
+                showAlertWith(title: "Invalid Selection", message: "Please make another selection")
+            } catch VendingMachineError.insufficientFunds(let required) {
+                let message = "You need $\(required) to complete the transaction"
+                showAlertWith(title: "Insufficient Funds", message: message)
+            } catch let error {
+                fatalError("\(error)")
+            }
+            
+            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                collectionView.deselectItem(at: indexPath, animated: true)
+                updateCell(having: indexPath, selected: false)
             }
         } else {
             // FIXME: Alert user to no selection
@@ -117,10 +128,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    func showAlert() {
-        let alertController = UIAlertController(title: "Out of Stock", message: "This item is unavailable, please make another selection", preferredStyle: .alert)
+    func showAlertWith(title: String, message: String, style: UIAlertControllerStyle = .alert) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        
+        let actoin = UIAlertAction(title: "OK", style: .default, handler: dismissAlert)
+        alertController.addAction(actoin)
         present(alertController, animated: true, completion: nil)
         
+    }
+    
+    func dismissAlert(sender: UIAlertAction) -> Void {
+        updateDisplayWith(balance: 0, totalPrice: 0, itemPrice: 0, itemQuatity: 1)
     }
     
     
