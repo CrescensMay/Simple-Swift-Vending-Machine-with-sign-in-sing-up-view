@@ -130,7 +130,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func showAlertWith(title: String, message: String, style: UIAlertControllerStyle = .alert) {
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let alertController = UIAlertController(title: title
+            , message: message, preferredStyle: style)
         
         let actoin = UIAlertAction(title: "OK", style: .default, handler: dismissAlert)
         alertController.addAction(actoin)
@@ -140,6 +141,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func dismissAlert(sender: UIAlertAction) -> Void {
         updateDisplayWith(balance: 0, totalPrice: 0, itemPrice: 0, itemQuatity: 1)
+    }
+    @IBAction func depositFunds() {
+        vendingMachine.deposit(5.0)
+        updateDisplayWith(balance: vendingMachine.amountDeposited)
     }
     
     
