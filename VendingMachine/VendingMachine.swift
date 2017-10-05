@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //Model
 //enum to hold items
@@ -23,6 +24,15 @@ enum VendingSelection: String {
     case fruitJuice
     case sportsDrink
     case gum
+    
+    //return image, display them on the view
+    func icon() -> UIImage {
+        if let image = UIImage(named: self.rawValue) {
+            return image
+        } else{
+            return #imageLiteral(resourceName: "default")
+        }
+    }
 }
 
 protocol VendingItem {
