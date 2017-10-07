@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047096CC1F88383E00E1D695 /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047096CB1F88383E00E1D695 /* SingInViewController.swift */; };
 		04820CC91F8574AF00FBAF80 /* VendingMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04820CC81F8574AF00FBAF80 /* VendingMachine.swift */; };
 		04820CCB1F86B97500FBAF80 /* DepositController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04820CCA1F86B97500FBAF80 /* DepositController.swift */; };
+		04820D0B1F87119E00FBAF80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04820D0A1F87119E00FBAF80 /* GoogleService-Info.plist */; };
+		0CDC1455A9DC944C88123424 /* Pods_VendingMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C65572FCB8E6A51E4277F49 /* Pods_VendingMachine.framework */; };
 		9771F6B51DF0833300B2B06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771F6B41DF0833300B2B06D /* AppDelegate.swift */; };
 		9771F6B71DF0833300B2B06D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771F6B61DF0833300B2B06D /* ViewController.swift */; };
 		9771F6BA1DF0833300B2B06D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9771F6B81DF0833300B2B06D /* Main.storyboard */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047096CB1F88383E00E1D695 /* SingInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		04820CC81F8574AF00FBAF80 /* VendingMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingMachine.swift; sourceTree = "<group>"; };
 		04820CCA1F86B97500FBAF80 /* DepositController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositController.swift; sourceTree = "<group>"; };
+		04820D0A1F87119E00FBAF80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1CA972D1E71B3358FFE5132F /* Pods-VendingMachine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendingMachine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VendingMachine/Pods-VendingMachine.debug.xcconfig"; sourceTree = "<group>"; };
 		9771F6B11DF0833300B2B06D /* VendingMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendingMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9771F6B41DF0833300B2B06D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9771F6B61DF0833300B2B06D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		9771F6C01DF0833300B2B06D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9771F6C61DF0A6C000B2B06D /* VendingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingItemCell.swift; sourceTree = "<group>"; };
 		9771F6CC1DF0D68E00B2B06D /* VendingInventory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VendingInventory.plist; sourceTree = "<group>"; };
+		9C65572FCB8E6A51E4277F49 /* Pods_VendingMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendingMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C8A16197E88F1F63E8EF06 /* Pods-VendingMachine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendingMachine.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendingMachine/Pods-VendingMachine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDC1455A9DC944C88123424 /* Pods_VendingMachine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200119CD6EB46B7DEF7BA93F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C65572FCB8E6A51E4277F49 /* Pods_VendingMachine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9771F6A81DF0833300B2B06D = {
 			isa = PBXGroup;
 			children = (
 				9771F6B31DF0833300B2B06D /* VendingMachine */,
 				9771F6B21DF0833300B2B06D /* Products */,
+				200119CD6EB46B7DEF7BA93F /* Frameworks */,
+				AA214AA2CB7E651D71035408 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +91,19 @@
 				9771F6BD1DF0833300B2B06D /* LaunchScreen.storyboard */,
 				9771F6C01DF0833300B2B06D /* Info.plist */,
 				9771F6CC1DF0D68E00B2B06D /* VendingInventory.plist */,
+				04820D0A1F87119E00FBAF80 /* GoogleService-Info.plist */,
+				047096CB1F88383E00E1D695 /* SingInViewController.swift */,
 			);
 			path = VendingMachine;
+			sourceTree = "<group>";
+		};
+		AA214AA2CB7E651D71035408 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CA972D1E71B3358FFE5132F /* Pods-VendingMachine.debug.xcconfig */,
+				A1C8A16197E88F1F63E8EF06 /* Pods-VendingMachine.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9771F6C31DF0833300B2B06D /* Build configuration list for PBXNativeTarget "VendingMachine" */;
 			buildPhases = (
+				92B8CCB60676BA366EF5DE70 /* [CP] Check Pods Manifest.lock */,
 				9771F6AD1DF0833300B2B06D /* Sources */,
 				9771F6AE1DF0833300B2B06D /* Frameworks */,
 				9771F6AF1DF0833300B2B06D /* Resources */,
+				347FBCC064AB5331EBB0F167 /* [CP] Embed Pods Frameworks */,
+				EB24EAB4FD0E6D260A4C0EAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +170,7 @@
 			files = (
 				9771F6BF1DF0833300B2B06D /* LaunchScreen.storyboard in Resources */,
 				9771F6CD1DF0D68E00B2B06D /* VendingInventory.plist in Resources */,
+				04820D0B1F87119E00FBAF80 /* GoogleService-Info.plist in Resources */,
 				9771F6BC1DF0833300B2B06D /* Assets.xcassets in Resources */,
 				9771F6BA1DF0833300B2B06D /* Main.storyboard in Resources */,
 			);
@@ -144,11 +178,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		347FBCC064AB5331EBB0F167 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VendingMachine/Pods-VendingMachine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VendingMachine/Pods-VendingMachine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92B8CCB60676BA366EF5DE70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VendingMachine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB24EAB4FD0E6D260A4C0EAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VendingMachine/Pods-VendingMachine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9771F6AD1DF0833300B2B06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047096CC1F88383E00E1D695 /* SingInViewController.swift in Sources */,
 				9771F6B71DF0833300B2B06D /* ViewController.swift in Sources */,
 				9771F6B51DF0833300B2B06D /* AppDelegate.swift in Sources */,
 				04820CCB1F86B97500FBAF80 /* DepositController.swift in Sources */,
@@ -272,10 +367,12 @@
 		};
 		9771F6C41DF0833300B2B06D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA972D1E71B3358FFE5132F /* Pods-VendingMachine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VendingMachine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartsoft.VendingMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,10 +382,12 @@
 		};
 		9771F6C51DF0833300B2B06D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C8A16197E88F1F63E8EF06 /* Pods-VendingMachine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VendingMachine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartsoft.VendingMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
