@@ -69,7 +69,7 @@ class SingInViewController: UIViewController {
                         print("Sign in")
                     } else {
                         //check error show message
-                        self.showAlert(title: "Input", message: "Wrong eamil or password, please try again")
+                        self.showAlert(title: "Input", message: "Wrong email or password, please try again")
                         
                     }
                 })
@@ -105,7 +105,6 @@ class SingInViewController: UIViewController {
     }
     
     func dismiss(sender: UIAlertAction) -> Void {
-        EmailTxt.text = ""
         PasswordText.text = ""
     }
     /*
