@@ -109,12 +109,12 @@
                         <outlet property="SignInBtn" destination="5Wb-EV-IZq" id="nUH-aP-jSM"/>
                         <outlet property="SignInLabel" destination="j7Y-nx-XEz" id="PuR-XC-R0n"/>
                         <outlet property="SignInSelector" destination="xVw-4b-3Va" id="r5h-8B-KUE"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToStore" id="zPs-Z1-pAv"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToStore" id="Qjx-Dt-QT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXA-5h-bkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031.2" y="152.47376311844079"/>
+            <point key="canvasLocation" x="-1102" y="152"/>
         </scene>
         <!--Store-->
         <scene sceneID="tne-QT-ifu">
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjJ-gY-xFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="136"/>
+            <point key="canvasLocation" x="556" y="163"/>
         </scene>
     </scenes>
     <resources>
